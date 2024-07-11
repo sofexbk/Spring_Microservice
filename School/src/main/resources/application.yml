@@ -1,0 +1,32 @@
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+
+spring:
+  application:
+    name: schools
+  config:
+    import: optional:configserver:http://localhost:8888
+#  datasource:
+    #    driver-class-name: com.mysql.cj.jdbc.Driver
+    #    url: jdbc:mysql://localhost:3306/microservice1
+    #    username: root
+  #    password:
+    #  jpa:
+      #    hibernate:
+    #      ddl-auto: create
+    #    show-sql: true
+      #    properties:
+      #      hibernate:
+#        dialect: org.hibernate.dialect.MySQL8Dialect
+  #server:
+#  port: 8091
+
+  #application:
+    #  config:
+    #    students-url: http://localhost:8222/api/v1/students
+    #port was 8090 i changed it to 8222 so thaat the school service can communicate to gateway
+
